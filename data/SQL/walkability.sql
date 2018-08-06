@@ -1,0 +1,17 @@
+REFRESH MATERIALIZED VIEW osm_walkability_nbus_stops;
+REFRESH MATERIALIZED VIEW osm_walkability_prox_airport;
+REFRESH MATERIALIZED VIEW osm_walkability_prox_cache_industrial;
+REFRESH MATERIALIZED VIEW osm_walkability_prox_industrial_area;
+REFRESH MATERIALIZED VIEW osm_walkability_prox_grocery;
+REFRESH MATERIALIZED VIEW osm_walkability_prox_restaurants;
+REFRESH MATERIALIZED VIEW osm_walkability_prox_cache_shops;
+REFRESH MATERIALIZED VIEW osm_walkability_prox_shops;
+REFRESH MATERIALIZED VIEW osm_walkability_prox_school;
+REFRESH MATERIALIZED VIEW osm_walkability_prox_enter;
+REFRESH MATERIALIZED VIEW osm_walkability_prox_coffee;
+REFRESH MATERIALIZED VIEW osm_walkability_prox_cache_metro;
+REFRESH MATERIALIZED VIEW osm_walkability_prox_metro;
+REFRESH MATERIALIZED VIEW osm_walkability_prox_library;
+REFRESH MATERIALIZED VIEW osm_walkability_prox_railway;
+REFRESH MATERIALIZED VIEW osm_walkability_prox_parks;
+
