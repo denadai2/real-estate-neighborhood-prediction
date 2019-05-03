@@ -25,6 +25,7 @@ Then, do:
 ``` sh
 createdb dsaa
 gunzip < intermediate_db_backup.sql.gz | psql dsaa
+tar -xf data.tar -C data/
 ```
 
 To produce the intermediary files, go to the section "DIY Instructions".
@@ -121,3 +122,6 @@ Download satellite shapefiles from https://land.copernicus.eu/local/urban-atlas/
 ``` sh
 psql dsaa < data/SQL/urban_atlas.sql
 ```
+
+# Some additional notes to the repository
+* XGBoost 0.72 for some reason is not available anymore. I changed it to 0.71 because many users have contacted me because of this issue.

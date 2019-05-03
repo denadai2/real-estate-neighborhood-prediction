@@ -164,7 +164,7 @@ def main():
 
 	df_case = pd.read_parquet('data/generated_files/selling_houses.parquet')
 
-	df = pd.read_parquet('data/generated_files/dataset_dsaa2.parquet')
+	df = pd.read_parquet('data/generated_files/dataset_dsaa_release.parquet')
 
 	if args.neigh:
 		print("COMPUTING NEIGHBORHOOD FEATURES")
@@ -191,7 +191,8 @@ def main():
 			'prox_parks',
 			'dist_industrial_area',
 			'dist_sea',
-			'prox_coffee', 'prox_enter', 'prox_shops', 'prox_restaurants', 'prox_school', 'prox_grocery', 'prox_library',
+			'prox_coffee', 'prox_enter', 'prox_shops', 'prox_restaurants', 'prox_school', 'prox_grocery',
+			'prox_library',
 		]
 
 		neighborhood_columns = [
@@ -224,26 +225,26 @@ def main():
 		if not args.open:
 			neighborhood_columns.extend(['score', 'fatturato', 'assessed_land_value'])
 
+	house_features = ['sqmt',
+					  'constructionYear', 'energyClass', 'expensesCondominium',
 
-	house_features = [ 'sqmt',
-       'constructionYear', 'energyClass', 'expensesCondominium',
+					  'newFloorNumber', 'newHeating', 'portiere', 'infissi', 'giardino', 'arredato', 'esposizione',
+					  'kitchen',
+					  'condition', 'land_value',
 
-           'newFloorNumber', 'newHeating', 'portiere', 'infissi', 'giardino', 'arredato', 'esposizione', 'kitchen',
-           'condition', 'land_value',
+					  # 'Piscina',
+					  'Idromassaggio',
+					  'Mansarda',
+					  'Cantina',
+					  'Camino',
+					  'has_terrace', 'garage',
 
-       #'Piscina',
-       'Idromassaggio',
-       'Mansarda',
-       'Cantina',
-					   'Camino',
-       'has_terrace', 'garage',
-
-           'placeType_Appartamento', 'placeType_Attico / Mansarda',
-       'placeType_Casa indipendente', 'placeType_Loft / Open Space',
-       'placeType_Villetta a schiera',
-					   'property_class', 'property_type',
-           'locali', 'camere', 'altro', 'bagni',
-          ]
+					  'placeType_Appartamento', 'placeType_Attico / Mansarda',
+					  'placeType_Casa indipendente', 'placeType_Loft / Open Space',
+					  'placeType_Villetta a schiera',
+					  'property_class', 'property_type',
+					  'locali', 'camere', 'altro', 'bagni',
+					  ]
 	new_neighborhood_columns = ['neigh_{}'.format(c) for c in neighborhood_columns]
 
 	all_features = house_features + place_features + new_neighborhood_columns + additional_features
