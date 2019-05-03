@@ -11,7 +11,7 @@ Input, intermediary and source data can be downloaded from [figshare](https://do
 Dependencies are listed in the `requirements.txt` file at the root of the repository. Using [Python 3.6](https://www.python.org/downloads/) with [pip](https://pip.pypa.io/en/stable/installing/) all the required dependencies can be installed automatically.
 
 ``` sh
-pip3 install -r install/requirements.txt
+pip3 install -r requirements.txt
 ```
 
 * [PostgreSQL 10.0](https://www.postgresql.org/) 
