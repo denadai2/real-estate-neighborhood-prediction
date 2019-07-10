@@ -28,6 +28,8 @@ gunzip < intermediate_db_backup.sql.gz | psql dsaa
 tar -xf data.tar -C data/
 ```
 
+Then place the content of dsaa_census_areas.zip into `data/generated_files/`.
+
 To produce the intermediary files, go to the section "DIY Instructions".
 
 # Code
