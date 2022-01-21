@@ -11,7 +11,7 @@ Fiona==1.7.11.post2
 geopandas==0.3.0
 html5lib==1.0.1
 ipykernel==4.8.2
-ipython==6.4.0
+ipython==7.16.3
 ipython-genutils==0.2.0
 ipywidgets==7.2.1
 jedi==0.12.0
